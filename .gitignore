@@ -1,0 +1,28 @@
+# --- .NET / Backend ---
+bin/
+obj/
+*.user
+*.suo
+appsettings.Development.json
+appsettings.Local.json
+
+# --- Node / React Frontend ---
+node_modules/
+dist/
+build/
+.vite/
+
+# --- Environment variables / secrets ---
+.env
+.env.local
+.env.*.local
+
+# --- Editor / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+*.log
+npm-debug.log*
