@@ -1,0 +1,6 @@
+@SoundRevival.WebApi_HostAddress = http://localhost:5150
+
+GET {{SoundRevival.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
