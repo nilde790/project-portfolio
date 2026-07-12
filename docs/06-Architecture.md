@@ -18,13 +18,26 @@ are documented separately as ADRs (see `docs/adr/`).
   tables and to handle migrations (**Code First** approach — schema is 
   generated from C# entity classes via EF Core Migrations, rather than 
   generating classes from an existing database)
-- **Layered structure** (within `backend/`):
-  - **Controllers** — handle HTTP requests/responses, no business logic
-  - **Services** — contain business logic (e.g. "a user can only edit 
-    their own listing", "max 5 images per listing")
-  - **Repositories / DbContext** — handle data access via EF Core
-  - **DTOs (Data Transfer Objects)** — shape the data sent to/from the 
-    API, decoupled from the internal database entities
+- **Solution structure**: multi-project .NET Solution, with clear 
+  physical separation between layers (not just folders within a single 
+  project):
+  - **`NomeProgetto.WebApi`** — Controllers, request/response handling, 
+    authentication middleware; no business logic
+  - **`NomeProgetto.Repository`** — data access layer:
+    - `Interfaces/` — contracts (e.g. `IListingRepository`) defining 
+      what each repository/service must be able to do
+    - `Services/` — implementations of those interfaces, containing 
+      business logic (e.g. "a user can only edit their own listing", 
+      "max 5 images per listing") and EF Core data access
+  - **`NomeProgetto.Dto`** — Data Transfer Objects, shaping data 
+    sent to/from the API, decoupled from internal database entities
+  - **`NomeProgetto.Tests`** — unit tests, targeting the Repository 
+    layer's interfaces (enabled by depending on interfaces rather than 
+    concrete implementations — supports mocking in tests)
+- **Dependency direction**: WebApi depends on Repository (via 
+  interfaces) and Dto; Repository depends on Dto; this separation 
+  enforces that controllers never access the database directly
+  
 - **Authentication**: token-based (JWT) — the backend issues a token on 
   login, the frontend attaches it to subsequent requests to prove identity
 
