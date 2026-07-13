@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using SoundRevival.Repository.Entities;
 
 namespace SoundRevival.Repository
+
 {
     public class AppDbContext : DbContext
     {
