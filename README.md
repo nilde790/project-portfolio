@@ -1,4 +1,4 @@
-# Project Name
+# SoundRevival
 
 One-line description of the project (e.g., *"Marketplace for buying and selling musical instruments between individuals."*)
 
