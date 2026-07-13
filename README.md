@@ -1,23 +1,69 @@
-# Nome del progetto
+# Project Name
 
-Una riga: cosa è, in una frase (es. "Marketplace per la compravendita di strumenti musicali tra privati")
+One-line description of the project (e.g., *"Marketplace for buying and selling musical instruments between individuals."*)
 
-## 🎯 Cosa fa
-2-3 righe: le funzionalità core (registrazione, pubblicazione annunci, ricerca per filtri...)
+## 🎯 What It Does
 
-## 🖼️ Demo / Screenshot
-[qui andranno GIF o immagini da assets/images — per ora placeholder]
+Provide a brief overview (2–3 lines) of the project's core functionality, such as:
 
-## 🛠️ Stack tecnico
-Lista secca: linguaggi, framework, DB, tool (la scriveremo insieme dopo, in 06-Architecture.md)
+- User registration and authentication
+- Creating and managing listings
+- Searching and filtering listings
+- Messaging between buyers and sellers
+- Favorites, reviews, or other key features
 
-## 🚀 Come lanciarlo in locale
-Comandi passo-passo (clone, install, env, run) — questa sezione la completi man mano che il progetto cresce
+## 🖼️ Demo / Screenshots
 
-## 📁 Documentazione
-Link a docs/00-README.md, per chi vuole capire le decisioni dietro il progetto
+> GIFs or screenshots from `assets/images` will be added here as the project evolves.
 
-## 🎓 Cosa ho imparato / obiettivi del progetto
-Qui SÌ puoi essere onesto: "progetto realizzato per esercitarmi su X, Y, Z" — è visto BENE in un portfolio, non male, se scritto con maturità
+## 🛠️ Tech Stack
 
-## 📄 Licenza
+A concise list of the technologies used in the project, including:
+
+- Programming languages
+- Frameworks
+- Database
+- Development tools
+
+> This section will be completed alongside `docs/06-Architecture.md`.
+
+## 🚀 Running Locally
+
+Step-by-step instructions for running the project locally.
+
+```bash
+# Clone the repository
+git clone <repository-url>
+
+# Navigate into the project
+cd <project-folder>
+
+# Install dependencies
+...
+
+# Configure environment variables
+...
+
+# Start the application
+...
+```
+
+> This section will be expanded as the project grows.
+
+## 📁 Documentation
+
+For a deeper understanding of the project's architecture and design decisions, see:
+
+- `docs/00-README.md`
+
+## 🎓 What I Learned / Project Goals
+
+Describe the purpose of the project and the skills you aimed to develop.
+
+Example:
+
+> This project was built to strengthen my skills in full-stack web development, software architecture, authentication, REST APIs, and modern development workflows.
+
+## 📄 License
+
+Specify the project's license here (e.g., MIT License).
